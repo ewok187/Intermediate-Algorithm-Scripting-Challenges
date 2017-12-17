@@ -1,10 +1,10 @@
 function diffArray(arr1, arr2) {
-  var newArr = [];
+  var newArr = [];                                   //create empty array
 
-  function arrDiff(first, second) {
-    for (i = 0; i < first.length; i++) {
-      if (second.indexOf(first[i]) === -1) {
-        newArr.push(first[i]);
+  function arrDiff(first, second) {                  //create funtion with 2 args for the arrays
+    for (i = 0; i < first.length; i++) {             //loops through the first array and
+      if (second.indexOf(first[i]) === -1) {         //if smth is unique to the array
+        newArr.push(first[i]);                       //push it to newArr
       }
     }
   }
