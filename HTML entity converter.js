@@ -1,9 +1,9 @@
 function convertHTML(str) {
-  var placeHold = str.split("");
+  var placeHold = str.split("");                  // split str into arr of letters
 
-  for (var i = 0; i < placeHold.length; i++) {
+  for (var i = 0; i < placeHold.length; i++) {    // loop through the arr
     switch (placeHold[i]) {
-      case "&":
+      case "&":                                   // if the loop is on one of the cases replace the character with its html equivalent 
         placeHold[i] = "&amp;";
         break;
 
@@ -23,7 +23,7 @@ function convertHTML(str) {
         placeHold[i] = "&apos;";
     }
   }
-  return placeHold.join("");
+  return placeHold.join("");                      // create a string out of the array
 }
 
 convertHTML("Dolce & Gabbana");
