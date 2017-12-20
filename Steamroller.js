@@ -1,17 +1,17 @@
 function steamrollArray(arr) {
-  var flatArray = [];
+  var flatArray = [];               // create empty Array
 
-  var flatten = function(arg) {
-    if (!Array.isArray(arg)) {
-      flatArray.push(arg);
+  var flatten = function(arg) {     // create function that
+    if (!Array.isArray(arg)) {      // checks if argument is an Array
+      flatArray.push(arg);          // if it is, push it into "flatArray"
     } else {
-      for (var a in arg) {
+      for (var a in arg) {          // else get the index of arg and push it into "flatArray"
         flatten(arg[a]);
       }
     }
   };
 
-  arr.forEach(flatten);
+  arr.forEach(flatten); 
   return flatArray;
 }
 

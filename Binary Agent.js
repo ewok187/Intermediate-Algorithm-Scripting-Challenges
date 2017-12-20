@@ -1,8 +1,8 @@
 function binaryAgent(str) {
 
-  return str.split(" ").map(function(value) {
-    return String.fromCharCode(parseInt(value, 2));
-  }).join("");
+  return str.split(" ").map(function(value) {         // split str into array at every whitespace and map
+    return String.fromCharCode(parseInt(value, 2));   // get charcode from the binary nums and return string from them
+  }).join("");                                        // turn array into string 
 
 }
 
